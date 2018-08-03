@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style/index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <title>Pagina gueb</title>
 </head>
 
 <body>
-    <header>
-        <img src="assets/petsshop.jpg" alt="">
-        <h1>Petsshoping</h1>
-    </header>
     <div id="bar">
         <span id="btn-bar">
             <i class="fas fa-bars fa-2x"></i>
         </span>
     </div>
     <nav id="nav">
+        <section>
+            <img src="assets/perrolog.png" alt="">
+            <h1>Petsshoping</h1>
+        </section>
         <ul>
             <li>
                 <a href="">Inicio</a>
@@ -30,7 +31,7 @@
                 <a href="">Servicio</a>
             </li>
             <li>
-                <a href="">Categorias</a>
+                <a>Categorias</a>
                 <ul>
                     <li>
                         <a href="">Perros</a>
@@ -52,9 +53,22 @@
         </ul>
 
     </nav>
+    <div class="ocultar"></div>
+    <div class="buscar">
+        <section>
+            <input class="inp" type="text" placeholder="Buscar...">
+            <span title="Click para buscar">
+                <i class="fas fa-search"></i>
+        </section>
+        </span>
+    </div>
     <section class="content">
-        <div>
-            <h1>Accesorios</h1>
+        <div class="altura1">
+            <h1 class="bth1">Accesorios
+                <span class="sp12">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </h1>
             <section>
                 <ul>
                     <li>
@@ -105,7 +119,8 @@
             <h1>Peluches</h1>
             <section>
                 <article>
-                    <h2>Juguete jirafa de peluche TK-Pet Alice</h2>
+                    <h2>Juguete jirafa de peluche TK-Pet Alice </a>
+                    </h2>
                     <img src="assets/Juguete jirafa de peluche TK-Pet Alice.jpg" alt="">
                     <h6>$25.145</h6>
                     <a href="">Ver Mas</a>
@@ -134,27 +149,27 @@
             </section>
             <section>
                 <article>
-                    <h2>Titulo Generico</h2>
-                    <img src="assets/peluches_imagen_generica.jpg" alt="">
-                    <h6>$</h6>
+                    <h2>Juguete Perro Harley Peluche Hueso Negro</h2>
+                    <img src="assets/Juguete Perro Harley Peluche Hueso Negro.jpg " alt="">
+                    <h6>$28.300</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
                     <input type="text" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
                 <article>
-                    <h2>Titulo Generico</h2>
-                    <img src="assets/peluches_imagen_generica.jpg" alt="">
-                    <h6>$</h6>
+                    <h2>Peluche Kong Conchas Oso Small</h2>
+                    <img src="assets/Peluche Kong Conchas Oso Small.jpg" alt="">
+                    <h6>$29.500</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
                     <input type="text" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
                 <article>
-                    <h2>Titulo Generico</h2>
-                    <img src="assets/peluches_imagen_generica.jpg" alt="">
-                    <h6>$</h6>
+                    <h2>Juguete Gato Pajaritos Chirping Con Sonido Surtido</h2>
+                    <img src="assets/Juguete Gato Pajaritos Chirping Con Sonido Surtido.jpg" alt="">
+                    <h6>$20.200</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
                     <input type="text" placeholder="1">
@@ -191,119 +206,85 @@
                 </article>
             </section>
         </div>
-        <div>
-            <h2>Buscar producto</h2>
-            <input type="text" placeholder="Buscar...">
-            <span title="Click para buscar">
-                <i class="fas fa-search"></i>
-            </span>
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
     </section>
     <footer>
         <section>
             <ul>
                 <li tittle="Toca para desplegar" id="depli1">
-                    <h2 id="desph21">CONÓCENOS</h2>
-                    <a id="despa1" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Ventajas de Petsshoping</a>
-                    <a id="despa1" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Opiniones sobre Petsshopping</a>
-                    <a id="despa1" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Mas sobre Petsshopping</a>
-                    <a id="despa1" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Preguntas frecuentes</a>
-                    <a id="despa1" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Contacta con nosostros</a>
-                    <a id="despa1" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Trabajas con nosotros</a>
+                    <h2 id="desph1">CONÓCENOS
+                        <span class="sph21">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </h2>
+                    <a class="despa1">
+                        Ventajas de Petsshoping</a>
+                    <a class="despa1">
+                        Opiniones sobre Petsshopping</a>
+                    <a class="despa1">
+                        Mas sobre Petsshopping</a>
+                    <a class="despa1">
+                        Preguntas frecuentes</a>
+                    <a class="despa1">
+                        Contacta con nosostros</a>
+                    <a class="despa1">
+                        Trabajas con nosotros</a>
                 </li>
                 <li tittle="Toca para desplegar" id="depli2">
-                    <h2 id="desph22" >SERVICIOS</h2>
-                    <a id="despa2" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Nuestras tiendas</a>
-                    <a id="despa2" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Consulturio veterinario</a>
-                    <a id="despa2" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Recuperación de mascotas</a>
-                    <a id="despa2" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Blog</a>
-                    <a id="despa2" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Club privilegios en compras</a>
-                    <a id="despa2" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Paga+Tarde</a>
+                    <h2 id="desph2">SERVICIOS
+                        <span class="sph22">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </h2>
+                    <a class="despa2">
+                        Nuestras tiendas</a>
+                    <a class="despa2">
+                        Consulturio veterinario</a>
+                    <a class="despa2">
+                        Recuperación de mascotas</a>
+                    <a class="despa2">
+                        Blog</a>
+                    <a class="despa2">
+                        Club privilegios en compras</a>
+                    <a class="despa2">
+                        Paga+Tarde</a>
                 </li>
                 <li tittle="Toca para desplegar" id="depli3">
-                    <h2 id="desph23" >COMPRAS</h2>
-                    <a id="despa3" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Ofertas del mes</a>
-                    <a id="despa3" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Programa de puntos</a>
-                    <a id="despa3" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Suscribete a la Newsletter</a>
-                    <a id="despa3" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Consiciones de Envío</a>
-                    <a id="despa3" >
-                        <span>
-                            <i class="fas fa-angle-right"></i>
-                        </span>Top marcas</a>
+                    <h2 id="desph3">COMPRAS
+                        <span class="sph23">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </h2>
+                    <a class="despa3">
+                        Ofertas del mes</a>
+                    <a class="despa3">
+                        Programa de puntos</a>
+                    <a class="despa3">
+                        Suscribete a la Newsletter</a>
+                    <a class="despa3">
+                        Consiciones de Envío</a>
+                    <a class="despa3">
+                        Top marcas</a>
                 </li>
                 <li tittle="Toca para desplegar" id="depli4">
-                    <h2 id="desph24" >Contáctanos</h2>
-                    <p id="despp4" >Lunes a sabado: 7:30 a 20:30</p>
-                    <p id="despp4" >
+                    <h2 id="desph4">Contáctanos
+                        <span class="sph24">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </h2>
+                    <p class="despp4">Lunes a sabado: 7:30 a 20:30</p>
+                    <p class="despp4">
                         724 8442
                         <span>
                             <i class="fas fa-phone"></i>
                         </span>
                     </p>
-                    <p id="despp4" >
+                    <p class="despp4">
                         3162348829
                         <span>
                             <i class="fas fa-mobile"></i>
                         </span>
                     </p>
-                    <p id="despp4" >
+                    <p class="despp4">
                         supportPG@petsshoping.com
                         <span>
                             <i class="fas fa-envelope"></i>
@@ -313,10 +294,18 @@
             </ul>
         </section>
         <section>
-            <span title="Facebook.com"><i class="fab fa-facebook-square fa-3x"></i></span>
-            <span title="Twitter.com"><i class="fab fa-twitter-square fa-3x"></i></span>
-            <span title="Instagram.com"><i class="fab fa-instagram fa-3x"></i></span>
-            <span title="Youtube.com"><i class="fab fa-youtube fa-3x"></i></span>
+            <span title="Facebook.com">
+                <i class="fab fa-facebook-square fa-3x"></i>
+            </span>
+            <span title="Twitter.com">
+                <i class="fab fa-twitter-square fa-3x"></i>
+            </span>
+            <span title="Instagram.com">
+                <i class="fab fa-instagram fa-3x"></i>
+            </span>
+            <span title="Youtube.com">
+                <i class="fab fa-youtube fa-3x"></i>
+            </span>
             <h2>Siguenos en nuestras redes sociales</h2>
         </section>
     </footer>

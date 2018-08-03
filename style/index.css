@@ -20,7 +20,6 @@ body {
 
 nav {
     position: fixed;
-    top: 10%;
     width: 100%;
     text-align: center;
     background-color: rgb(18, 14, 255);
@@ -28,7 +27,6 @@ nav {
 }
 
 nav ul li {
-    margin: 1%;
     overflow: hidden;
     display: inline-block;
 }
@@ -37,6 +35,8 @@ nav ul li a {
     position: relative;
     color: white;
     font-size: 20px;
+    padding: 15px 20px;
+    display: inline-block;
 }
 
 nav ul li a::after {
@@ -56,21 +56,21 @@ nav ul li:nth-child(3) ul {
     padding: 0px;
     width: 150px;
     background-color: rgb(46, 42, 255);
-    border-radius: 5px;
-    display: block;
-    overflow: hidden;
     opacity: 0;
     transform: translate(0, -20px);
-    transition-property: visibility, transform, opacity;
+    transition-property: display, transform, opacity;
     transition-delay: 0s, 0s, .15s;
     transition-duration: 35s, .35s, .35s;
-    visibility: hidden;
+    border-radius: 5px;
+    height: 0;
+    overflow: hidden;
+    
 }
 
 nav ul li:nth-child(3):hover ul {
+    height: auto;
     transform: translateY(0);
     opacity: 1;
-    visibility: visible;
 }
 
 nav ul li:nth-child(3) ul li {
@@ -102,7 +102,6 @@ nav ul li a:hover::after {
 
 #bar {
     position: fixed;
-    top: 8%;
     padding: 20px;
     width: 100%;
     display: none;
@@ -116,34 +115,47 @@ nav ul li a:hover::after {
 .slider {
     transform: translateX(0);
 }
-
-header {
-    position: fixed;
-    width: 100%;
-    background: white;
-    z-index: 3;
+nav section{
+    position: absolute;
 }
-
-header h1 {
-    margin-top: 0.35%;
-    color: rgb(75, 75, 75);
+nav section h1 {
+    color: rgb(255, 255, 255);
+    width: 25.8%;
+    font-size: 25px;
     cursor: pointer;
+    line-height: 60px;
 }
 
-header img {
-    margin-left: 39%;
+nav section img {
     width: 5%;
     float: left;
+    padding: 0.5% 0 0 3%;
 }
-
+.buscar{
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    height: 140px;
+    background-color: rgb(0, 60, 255);
+}
+.buscar section{
+    padding: 3% 32%
+}
+.buscar section input{
+    position: relative;
+    font-size: 15px;
+    width: 75%;
+    background: none;
+    color: white;
+    border: none;
+    border-bottom: solid 1px #080808;
+}
 .content {
     position: relative;
-    top: 160px;
-    left: 0;
-    right: 0;
+    top: 152px;
     margin: 0 auto;
     width: 96%;
-    height: 1300px;
+    height: auto;
     background-color: white;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -152,9 +164,10 @@ header img {
 
 .content div {
     position: relative;
-    float: left;
-    width: 33.3%;
+    display: inline-grid;
+    width: 32.3%;
 }
+
 
 .content div h1 {
     margin: 3%;
@@ -317,11 +330,9 @@ header img {
 
 footer {
     position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 152px;
+    padding: 2% 0 2% 0;
     margin: 0 auto;
-    padding-top: 14%;
     width: 100%;
     background-color: #080808;
 }
@@ -333,8 +344,6 @@ footer section:nth-child(1) {
 
 footer section ul li {
     position: relative;
-    margin-left: 4%;
-    margin-bottom: 2%;
     width: 20%;
     display: inline-block;
 }
@@ -345,17 +354,22 @@ footer section ul li h2 {
     font-size: 96%;
 }
 
+footer section ul li h2 span {
+    visibility: hidden;
+}
+
 footer section ul li a {
     color: white;
-    font-size: 80%;
+    /* font-size: 80%; */
     display: block;
+    cursor: pointer;
 }
 
 footer section ul li a:hover {
     color: red;
 }
 
-footer section ul li:last-child span i {
+footer section ul li:last-child p span i {
     color: rgb(0, 149, 255);
     margin-left: 10px;
     margin-right: 30px;
@@ -379,56 +393,22 @@ footer section:nth-child(2) span i {
     transition: all .14s linear;
 }
 
-footer section:nth-child(2) span:nth-child(1) {
-    margin-left: 41%;
-}
-
-footer section:nth-child(2) h2 {
-    color: white;
-    margin-left: 39.7%;
-}
-
 footer section:nth-child(2) span:hover i {
     color: aqua;
     transform: translateY(2%);
 }
 
-@media only screen and (max-width:1200px) {
-    .content {
-        height: 1190px;
-    }
-    footer {
-        padding-top: 16%;
-    }
-    footer section:nth-child(2) span:nth-child(1) {
-        margin-left: 35%;
-    }
-    footer section:nth-child(2) h2 {
-        color: white;
-        margin-left: 31.7%;
-    }
+footer section:nth-child(2) {
+    text-align: center;
 }
 
-.desplegablea {
-    visibility: visible;
+footer section:nth-child(2) h2 {
+    color: white;
 }
 
-.desplegableli {
-    height: auto;
-}
-
-@media only screen and (max-width:1031px) and (min-width:992px) {
-    footer {
-        padding-top: 19%;
-    }
-    #nav {
-        top: 4%;
-    }
-}
-
-@media only screen and (max-width:991px) {
-    footer {
-        padding-top: 20%;
+@media only screen and (max-width:1000px) {
+    nav section{
+        display: none;
     }
     footer section ul li {
         width: 100%;
@@ -436,31 +416,119 @@ footer section:nth-child(2) span:hover i {
         margin-left: 0;
         border-bottom: solid 1px gray;
         transition-property: height;
-        transition-delay: 0;
+        transition-delay: 0s;
         transition-duration: .35s;
-        overflow: hidden;
         display: block;
+        overflow: hidden;
     }
     footer section ul li h2 {
         padding: 2%;
         cursor: pointer;
     }
+    footer section ul li h2:hover {
+        background-color: #252525;
+    }
     footer section ul li a {
-        visibility: hidden;
+        opacity: 0;
+        transition-property: opacity;
+        transition-delay: 0s;
+        transition-duration: .35s;
     }
     footer p {
+        opacity: 0;
+        transition-property: opacity;
+        transition-delay: 0s;
+        transition-duration: .35s;
+    }
+    footer section ul li h2 span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 1%;
+        transform: rotate(90deg);
+        transition: transform .36s linear;
+        visibility: visible;
+    }
+    footer section ul li h2 span i {
+        color: rgb(102, 102, 102);
+        margin: 0;
+    }
+    .ocultar {
+        position: fixed;
+        top: 13%;
+        width: 100%;
+        height: 100%;
+        background-color: #252525;
+        transition: all .15s linear;
+        opacity: .4;
+        z-index: 2;
+        visibility: hidden;
+    }
+    .rotate {
+        transform: rotate(270deg);
+    }
+    .desplegableoc {
+        visibility: visible;
+    }
+    .desplegablea {
+        visibility: visible;
+        opacity: 1;
+    }
+    .desplegableli {
+        height: 160px;
+    }
+    .desplegableh2 {
+        background: #252525;
+    }
+}
+@media only screen and (max-width:800px) {
+    .content div:nth-child(2) section article {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width:601px) {
+    .ocultar {
         visibility: hidden;
     }
 }
 
 @media only screen and (max-width:600px) {
+    .content div:nth-child(2) section article {
+        width: 100%;
+    }
+    .content div:nth-child(1) {
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        background-color: rgb(207, 207, 207);
+        transition: height .35s linear;
+    }
+    .content div:nth-child(1) h1{
+        width: 100%;
+    }
+    .content div:nth-child(1) span{
+        position: absolute;
+        right: 10%;
+        top: 16px;
+        transform: rotate(90deg);
+    }
+    .content div:nth-child(1):hover{
+        height: auto;
+    }
+    .content div:nth-child(1):hover span{
+        transform: rotate(-90deg);
+    }
     #bar {
         display: block;
         background-color: rgb(18, 14, 255);
         z-index: 3;
     }
+    .buscar{
+        top: 73px;
+    }
     nav {
-        top: 20%;
+        top: 13%;
         width: 184.8px;
         height: calc(100% - 73px);
         background-color: rgb(18, 14, 255);
@@ -483,17 +551,5 @@ footer section:nth-child(2) span:hover i {
     header img {
         width: 46px;
         float: left;
-    }
-}
-
-@media only screen and (max-width:406px) {
-    header img {
-        margin-left: 20%;
-    }
-}
-
-@media only screen and (max-width:600px)and (min-width:407px) {
-    header img {
-        margin-left: 30%;
     }
 }
