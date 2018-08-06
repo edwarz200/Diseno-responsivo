@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Chela+One|Merienda');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Quicksand|Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
 * {
     padding: 0;
     margin: 0;
@@ -22,7 +23,7 @@ nav {
     position: fixed;
     width: 100%;
     text-align: center;
-    background-color: rgb(18, 14, 255);
+    background-color: rgb(0, 72, 255);
     z-index: 3;
 }
 
@@ -52,19 +53,17 @@ nav ul li a::after {
 
 nav ul li:nth-child(3) ul {
     position: absolute;
-    top: 44px;
+    top: 59px;
     padding: 0px;
-    width: 150px;
-    background-color: rgb(46, 42, 255);
+    width: 148px;
+    background-color: rgb(0, 153, 255);
     opacity: 0;
     transform: translate(0, -20px);
     transition-property: display, transform, opacity;
     transition-delay: 0s, 0s, .15s;
     transition-duration: 35s, .35s, .35s;
-    border-radius: 5px;
     height: 0;
     overflow: hidden;
-    
 }
 
 nav ul li:nth-child(3):hover ul {
@@ -115,41 +114,83 @@ nav ul li a:hover::after {
 .slider {
     transform: translateX(0);
 }
-nav section{
+
+nav section {
     position: absolute;
 }
+
 nav section h1 {
     color: rgb(255, 255, 255);
-    width: 25.8%;
+    width: 40.8%;
     font-size: 25px;
+    font-family: 'Poiret One', cursive;
     cursor: pointer;
     line-height: 60px;
 }
 
 nav section img {
-    width: 5%;
+    width: 12%;
     float: left;
     padding: 0.5% 0 0 3%;
 }
-.buscar{
-    position: absolute;
+
+.buscar {
+    position: fixed;
     top: 64px;
     width: 100%;
     height: 140px;
     background-color: rgb(0, 60, 255);
 }
-.buscar section{
+
+.buscar section {
     padding: 3% 32%
 }
-.buscar section input{
+
+.buscar section input {
     position: relative;
     font-size: 15px;
     width: 75%;
     background: none;
     color: white;
+    transition: all .25s linear;
     border: none;
-    border-bottom: solid 1px #080808;
+    border-bottom: solid 1px #ffffff;
+    outline: none;
+    box-shadow: none;
 }
+.content div:nth-child(2) section article input {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px #000000;
+    outline: none;
+    box-shadow: none;
+    transition: all .25s linear;
+}
+.content div:nth-child(2) section article input:hover {
+    border-bottom: solid 1px #ff0000;
+}
+.dejarasiinp {
+    border-bottom: solid 1px #000000;
+}
+
+.buscar section label {
+    position: absolute;
+    color: white;
+}
+
+.buscar section span {
+    cursor: pointer;
+    transition: all .25s linear;
+}
+
+.inpu:hover, .buscar section span:hover+input {
+    border-bottom: solid 1px #000000;
+}
+
+.inpu:hover+span, .buscar section span:hover, .dejarasispan {
+    color: #ffffff;
+}
+
 .content {
     position: relative;
     top: 152px;
@@ -165,14 +206,20 @@ nav section img {
 .content div {
     position: relative;
     display: inline-grid;
+}
+
+.agalt {
     width: 32.3%;
 }
 
+.sp12 {
+    visibility: hidden;
+}
 
 .content div h1 {
     margin: 3%;
     font-size: 20px;
-    width: 10%;
+    width: 100%;
 }
 
 .content div ul {
@@ -208,6 +255,7 @@ nav section img {
 
 .content div:nth-child(2) {
     width: 66.7%;
+    margin-bottom: 5%;
 }
 
 .content div:nth-child(2) section {
@@ -275,7 +323,7 @@ nav section img {
     display: inline-block;
 }
 
-.content div:nth-child(2) section article input {
+.content div:nth-child(2) section article textarea {
     margin-right: 20%;
     width: 15%;
     height: 20%;
@@ -306,7 +354,7 @@ nav section img {
     width: 29.3%;
 }
 
-.content div:nth-child(3) input {
+.content div:nth-child(3) textarea {
     margin-top: 5%;
     width: 60%;
     font-size: 13px;
@@ -315,7 +363,7 @@ nav section img {
     font-family: 'Quicksand', sans-serif;
 }
 
-.content div:nth-child(3) input:hover {
+.content div:nth-child(3) textarea:hover {
     border-bottom: solid 1px rgb(0, 179, 255);
 }
 
@@ -344,8 +392,8 @@ footer section:nth-child(1) {
 
 footer section ul li {
     position: relative;
-    width: 20%;
-    display: inline-block;
+    width: 24%;
+    display: inline-grid;
 }
 
 footer section ul li h2 {
@@ -360,7 +408,7 @@ footer section ul li h2 span {
 
 footer section ul li a {
     color: white;
-    /* font-size: 80%; */
+    font-size: 80%;
     display: block;
     cursor: pointer;
 }
@@ -406,8 +454,12 @@ footer section:nth-child(2) h2 {
     color: white;
 }
 
+.ocultar1 {
+    visibility: hidden;
+}
+
 @media only screen and (max-width:1000px) {
-    nav section{
+    nav section {
         display: none;
     }
     footer section ul li {
@@ -455,7 +507,7 @@ footer section:nth-child(2) h2 {
     }
     .ocultar {
         position: fixed;
-        top: 13%;
+        top: 73px;
         width: 100%;
         height: 100%;
         background-color: #252525;
@@ -475,15 +527,39 @@ footer section:nth-child(2) h2 {
         opacity: 1;
     }
     .desplegableli {
-        height: 160px;
+        height: 196px;
     }
     .desplegableh2 {
         background: #252525;
     }
 }
+
 @media only screen and (max-width:800px) {
-    .content div:nth-child(2) section article {
-        width: 40%;
+    .content div:nth-child(2) {
+        width: 100%;
+    }
+    .agalt {
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        background-color: rgb(207, 207, 207);
+        transition: height .35s linear;
+    }
+    .content div:nth-child(1) h1 {
+        margin: 1.5%;
+    }
+    .sp12 {
+        position: absolute;
+        right: 10%;
+        top: 12px;
+        transform: rotate(90deg);
+        visibility: visible;
+    }
+    .divagregaraltura {
+        height: 700px;
+    }
+    .voltearspan {
+        transform: rotate(-90deg);
     }
 }
 
@@ -496,39 +572,54 @@ footer section:nth-child(2) h2 {
 @media only screen and (max-width:600px) {
     .content div:nth-child(2) section article {
         width: 100%;
+        margin: 3% 0;
+        padding: 4% 0;
+        border-bottom: solid 1px #dddddd;
     }
-    .content div:nth-child(1) {
+    .content div:nth-child(2) section article:hover {
+        background-color: #f0f0f0;
+    }
+    .divagregaraltura {
+        height: 550px;
+    }
+    .content div:nth-child(2) section article h2 {
+        margin-left: 7%;       
+        width: 90%;
+        font-size: 90%;
+    }
+    .content div:nth-child(2) section article img {
+        width: 37%;
+        float: left;
+    }
+    .content div:nth-child(2) section article h6 {
         width: 100%;
-        height: 50px;
-        overflow: hidden;
-        background-color: rgb(207, 207, 207);
-        transition: height .35s linear;
+        font-size: 20px;
     }
-    .content div:nth-child(1) h1{
-        width: 100%;
+    .content div:nth-child(2) section article input {
+        width: 25%;
     }
-    .content div:nth-child(1) span{
-        position: absolute;
-        right: 10%;
-        top: 16px;
-        transform: rotate(90deg);
+    .content div:nth-child(2) section article a:nth-child(4) {
+        padding: 1.3% 10%;
     }
-    .content div:nth-child(1):hover{
-        height: auto;
+    .content div:nth-child(2) section article a:nth-child(7) {
+        padding: 1.3% 10%;
     }
-    .content div:nth-child(1):hover span{
-        transform: rotate(-90deg);
+    footer section:nth-child(2) h2{
+        font-size: 16px;
+    }
+    footer section:nth-child(2) span{
+        font-size: .7em;
     }
     #bar {
         display: block;
         background-color: rgb(18, 14, 255);
         z-index: 3;
     }
-    .buscar{
+    .buscar {
         top: 73px;
     }
     nav {
-        top: 13%;
+        top: 73px;
         width: 184.8px;
         height: calc(100% - 73px);
         background-color: rgb(18, 14, 255);
@@ -551,5 +642,40 @@ footer section:nth-child(2) h2 {
     header img {
         width: 46px;
         float: left;
+    }
+}
+@media only screen and (max-width:400px) {
+    .divagregaraltura {
+        height: 430px;
+    }
+    .content div:nth-child(2) section article a:nth-child(4) {
+        padding: 1.3% 7%;
+    }
+    .content div:nth-child(2) section article a:nth-child(7) {
+        padding: 1.3% 7%;
+    }
+    footer section:nth-child(2) h2{
+        font-size: 12px;
+    }
+    footer section:nth-child(2) span{
+        font-size: .6em;
+    }
+}
+@media only screen and (max-width:300px) {
+    .divagregaraltura {
+        height: 370px;
+    }
+    .content div:nth-child(2) section article a:nth-child(4) {
+        padding: 1.3% 2%;
+    }
+    .content div:nth-child(2) section article a:nth-child(7) {
+        margin-left: 46%;
+        padding: 1.3% 2%;
+    }
+    footer section:nth-child(2) h2{
+        font-size: 12px;
+    }
+    footer section:nth-child(2) span{
+        font-size: .6em;
     }
 }

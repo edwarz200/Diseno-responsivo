@@ -12,7 +12,7 @@
     <title>Pagina gueb</title>
 </head>
 
-<body>
+<body onclick="limpiar()">
     <div id="bar">
         <span id="btn-bar">
             <i class="fas fa-bars fa-2x"></i>
@@ -56,15 +56,16 @@
     <div class="ocultar"></div>
     <div class="buscar">
         <section>
-            <input class="inp" type="text" placeholder="Buscar...">
-            <span title="Click para buscar">
+            <label class="lab1">Buscar...</label>
+            <input class="inpu" id="inp" type="text" onkeypress="tecla(event)" >
+            <span class="span123" title="Click para buscar">
                 <i class="fas fa-search"></i>
         </section>
         </span>
     </div>
     <section class="content">
-        <div class="altura1">
-            <h1 class="bth1">Accesorios
+        <div class="agalt">
+            <h1 class="bth2">Accesorios
                 <span class="sp12">
                     <i class="fas fa-chevron-right"></i>
                 </span>
@@ -125,7 +126,7 @@
                     <h6>$25.145</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
-                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
                 <article>
@@ -134,7 +135,7 @@
                     <h6>$15.724</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
-                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
                 <article>
@@ -143,7 +144,7 @@
                     <h6>$7.450</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
-                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
             </section>
@@ -154,7 +155,7 @@
                     <h6>$28.300</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
-                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
                 <article>
@@ -163,7 +164,7 @@
                     <h6>$29.500</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
-                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
                 <article>
@@ -172,36 +173,36 @@
                     <h6>$20.200</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
-                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
             </section>
             <section>
                 <article>
-                    <h2>Titulo Generico</h2>
-                    <img src="assets/peluches_imagen_generica.jpg" alt="">
-                    <h6>$</h6>
+                    <h2>Peluche toro sonriente para perros</h2>
+                    <img src="assets/peluche-toro-sonriente-para-perros.jpg" alt="">
+                    <h6>$25.207</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
-                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
                 <article>
-                    <h2>Titulo Generico</h2>
-                    <img src="assets/peluches_imagen_generica.jpg" alt="">
-                    <h6>$</h6>
+                    <h2>Donut peluche de rana GiGwi</h2>
+                    <img src="assets/donut-peluche-rana-gigwi.jpg" alt="">
+                    <h6>$19.147</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
-                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
                 <article>
-                    <h2>Titulo Generico</h2>
-                    <img src="assets/peluches_imagen_generica.jpg" alt="">
-                    <h6>$</h6>
+                    <h2>Ardilla de peluche rellenable de catnip para gatos</h2>
+                    <img src="assets/ardilla-peluche-rellenable-catnip-para-gatos.jpg" alt="">
+                    <h6>$16.789</h6>
                     <a href="">Ver Mas</a>
                     <h5>Cantidad:</h5>
-                    <input type="text" placeholder="1">
+                    <input type="number" placeholder="1">
                     <a href="">Comprar</a>
                 </article>
             </section>

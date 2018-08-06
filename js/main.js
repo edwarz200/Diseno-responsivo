@@ -9,16 +9,70 @@ const deli1 = document.querySelector('#depli1');
 const deli2 = document.querySelector('#depli2');
 const deli3 = document.querySelector('#depli3');
 const deli4 = document.querySelector('#depli4');
+const input = document.querySelector('#inp');
+const divag = document.querySelector('.agalt');
+const btnh2 = document.querySelector('.bth2');
+const spa12 = document.querySelector('.sp12');
+const la1 = document.querySelector('.lab1');
+
+
 var num1 = 0;
 var num2 = 0;
 var num3 = 0;
 var num4 = 0;
+var num5 = 0;
 
 flat = false;
 flat1 = false;
 flat2 = false;
 flat3 = false;
 flat4 = false;
+flat5 = false;
+flat6 = false;
+// Funciones
+var keyCode
+function tecla(e) {
+    if (window.event) keyCode = window.event.keyCode;
+    else if (e) keyCode = e.which;
+    la1.classList.add('ocultar1');
+    flat5 = true;
+}
+var ElementosClick = new Array();
+document.onclick = limpiar;
+
+function limpiar(e) {
+    if (e == null) {
+        HaHechoClick = event.srcElement;
+    } else {
+        HaHechoClick = e.target;
+    }
+    ElementosClick.push(HaHechoClick);
+    var hahecl = HaHechoClick.id;
+
+    if (hahecl == "") {
+        document.querySelector("#inp").value = "";
+        document.querySelector('.span123').classList.remove('dejarasispan');
+        la1.classList.remove('ocultar1');
+    } else {
+    }
+}
+// Botones
+btnh2.addEventListener('click', () => {
+    if (!flat6) {
+        divag.classList.add("divagregaraltura");
+        spa12.classList.add("voltearspan");
+        flat6 = true;
+        num5 = 1;
+    } else {
+        divag.classList.remove("divagregaraltura");
+        spa12.classList.remove("voltearspan");
+        flat6 = false;
+        num5 = 0;
+    }
+})
+input.addEventListener('click', () => {
+    document.querySelector('.span123').classList.add('dejarasispan');
+});
 btnoc.addEventListener('click', () => {
     if (!flat) {
         nav.classList.add("slider");
@@ -162,7 +216,7 @@ btndep3.addEventListener('click', () => {
         $('.sph24').toggleClass('rotate');
         flat4 = false;
         num3 = 0;
-    } 
+    }
     if (!flat3) {
         deli3.classList.add("desplegableli");
         btndep3.classList.add("desplegableh2");
